@@ -2,7 +2,7 @@
   <tbody>
     <template v-if="data.length">
       <template v-for="item in data">
-        <tr>
+        <tr :class="item.trClass">
           <td v-if="shouldRenderSelection">
             <multi-select :selection="selection" :row="item" />
           </td>
